@@ -37,36 +37,26 @@
         <?php
 
         // Setting the varibles
-        $lengthA = $_GET["length-A"];
-        $lengthB = $_GET["length-B"];
-        $lengthC = $_GET["length-C"];
+        $age = $_GET["age"];
+        $day = $_GET["day"];
 
-        // Showing this to the user
-        echo "If length A is: " . $lengthA . "<br>";
-        echo "If length B is: " . $lengthB . "<br>";
-        echo "If length C is: " . $lengthC . "<br>";
-        "<br>";
-        "<br>";
-        //Seetinng the if and else statments 
-        if ($lengthA + $lengthB > $lengthC && $lengthA + $lengthC > $lengthB && $lengthB + $lengthC > $lengthA) {
-          if ($lengthA == $lengthB && $lengthB == $lengthC) {
-            echo ("Equilateral triangle");
-          } else if ($lengthA == $lengthB || $lengthA == $lengthC || $lengthB == $lengthC) {
-            echo ("Isosceles triangle");
-          } else {
-            echo ("Scalene triangle");
-          }
+        // Showing user there chousen answer 
+        echo " <b> &nbsp Age is: " . $age . "<br> </b>";
+        echo " <b> &nbsp Day is : " . $day . "<br> </b>";
+
+        // Setting the if and else statments 
+        if (($day == "Tuesday" || $day == "Thursday") || $age > 12 && $age < 21) {
+          echo (" <b> &nbsp  You're eligible for student pricing </b>");
         } else {
-          echo ("Not a triangle");
+          echo (" <b> &nbsp You must pay the regular pricing </b>");
         }
         ?>
         <br /> <br>
         <div class="page-content-answer">
-          <a href="./index.php">Return ...</a>
+          &nbsp <a href=" ./index.php">Return ...</a>
         </div>
         <br>
         <div class="tempurature">
-          <img class="Calculate" src="images/type_of_traingles.jpg" alt="Movie ">
         </div>
       </main>
     </div>
